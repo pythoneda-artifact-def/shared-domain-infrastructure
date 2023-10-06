@@ -33,6 +33,8 @@
         "pythoneda-shared-pythoneda-infrastructure";
       inputs.pythoneda-shared-artifact-changes-events.inputs.pythoneda-shared-code-requests-events.inputs.pythoneda-shared-code-requests-shared.inputs.pythoneda-shared-nix-flake-shared.inputs.pythoneda-shared-git-shared.follows =
         "pythoneda-shared-git-shared";
+      url =
+        "github:pythoneda-shared-artifact-changes/events-infrastructure-artifact/0.0.3?dir=events-infrastructure";
     };
     pythoneda-shared-pythoneda-banner = {
       inputs.flake-utils.follows = "flake-utils";
