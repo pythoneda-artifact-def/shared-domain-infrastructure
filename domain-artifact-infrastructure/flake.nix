@@ -25,9 +25,10 @@
     pythoneda-shared-artifact-changes-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      #      inputs.pythoneda-shared-artifact-changes-events.follows = "INDIRECT-pythoneda-shared-artifact-changes-events";
       inputs.pythoneda-shared-artifact-changes-events.follows =
-        "pythoneda-shared-pythoneda-domain-artifact/pythoneda-shared-artifact-changes-events";
+        "INDIRECT-pythoneda-shared-artifact-changes-events";
+      # inputs.pythoneda-shared-artifact-changes-events.follows =
+      #  "pythoneda-shared-pythoneda-domain-artifact/pythoneda-shared-artifact-changes-events";
       inputs.pythoneda-shared-code-requests-jupyterlab.follows =
         "INDIRECT-pythoneda-shared-code-requests-jupyterlab";
       inputs.pythoneda-shared-pythoneda-banner.follows =
@@ -42,7 +43,7 @@
     pythoneda-shared-pythoneda-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-pythoneda/banner/0.0.6";
+      url = "github:pythoneda-shared-pythoneda/banner/0.0.8";
     };
     pythoneda-shared-pythoneda-domain = {
       inputs.flake-utils.follows = "flake-utils";
@@ -50,17 +51,19 @@
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       url =
-        "github:pythoneda-shared-pythoneda/domain-artifact/0.0.7?dir=domain";
+        "github:pythoneda-shared-pythoneda/domain-artifact/0.0.9?dir=domain";
     };
     pythoneda-shared-pythoneda-domain-artifact = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-artifact-changes-events.follows =
+        "INDIRECT-pythoneda-shared-artifact-changes-events";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-shared-pythoneda/domain-artifact-artifact/0.0.11?dir=domain-artifact";
+        "github:pythoneda-shared-pythoneda/domain-artifact-artifact/0.0.13?dir=domain-artifact";
     };
     pythoneda-shared-pythoneda-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -72,8 +75,7 @@
       url =
         "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.2?dir=infrastructure";
     };
-    ## indirect dependencies since 'follows' on nested inputs don't work for me
-    INDIRECT-pythoneda-shared-nix-flake-shared = {
+    INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-git-shared.follows =
@@ -85,13 +87,13 @@
       url =
         "github:pythoneda-shared-nix-flake/shared-artifact/0.0.2?dir=shared";
     };
-    INDIRECT-pythoneda-shared-code-requests-events = {
+    INDIRECT-INDIRECT-pythoneda-shared-code-requests-events = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-code-requests-shared.follows =
-        "INDIRECT-pythoneda-shared-code-requests-shared";
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared";
       inputs.pythoneda-shared-nix-flake-shared.follows =
-        "INDIRECT-pythoneda-shared-nix-flake-shared";
+        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
@@ -99,13 +101,13 @@
       url =
         "github:pythoneda-shared-code-requests/events-artifact/0.0.2?dir=events";
     };
-    INDIRECT-pythoneda-shared-code-requests-shared = {
+    INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      #      inputs.pythoneda-shared-nix-flake-shared.inputs.pythoneda-shared-git-shared.follows = "pythoneda-shared-pythoneda-domain-artifact/pythoneda-shared-git-shared";
+      # inputs.pythoneda-shared-nix-flake-shared.inputs.pythoneda-shared-git-shared.follows = "pythoneda-shared-pythoneda-domain-artifact/pythoneda-shared-git-shared";
       # inputs.pythoneda-shared-nix-flake-shared.inputs.pythoneda-shared-git-shared.follows = "pythoneda-shared-pythoneda-domain-artifact/pythoneda-shared-git-shared";
       inputs.pythoneda-shared-nix-flake-shared.follows =
-        "INDIRECT-pythoneda-shared-nix-flake-shared";
+        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
@@ -117,9 +119,9 @@
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-code-requests-shared.follows =
-        "INDIRECT-pythoneda-shared-code-requests-shared";
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared";
       inputs.pythoneda-shared-code-requests-events.follows =
-        "INDIRECT-pythoneda-shared-code-requests-events";
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
@@ -131,9 +133,9 @@
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-code-requests-shared.follows =
-        "INDIRECT-pythoneda-shared-code-requests-shared";
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared";
       inputs.pythoneda-shared-nix-flake-shared.follows =
-        "INDIRECT-pythoneda-shared-nix-flake-shared";
+        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
@@ -251,17 +253,9 @@
             pythoneda-shared-pythoneda-domain-artifact-infrastructure-python311;
           pythoneda-shared-pythoneda-domain-artifact-infrastructure-python38 =
             shared.devShell-for {
-              package =
-                packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python38;
-              python = pkgs.python38;
-              pythoneda-shared-pythoneda-banner =
-                pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38;
-              pythoneda-shared-pythoneda-domain =
-                pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python38;
-              inherit archRole layer nixpkgsRelease org pkgs repo space;
-            };
-          pythoneda-shared-pythoneda-domain-artifact-infrastructure-raw-python38 =
-            shared.raw-devShell-for {
+              banner = "${
+                  pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38
+                }/bin/banner.sh";
               package =
                 packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python38;
               python = pkgs.python38;
@@ -273,17 +267,9 @@
             };
           pythoneda-shared-pythoneda-domain-artifact-infrastructure-python39 =
             shared.devShell-for {
-              package =
-                packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python39;
-              python = pkgs.python39;
-              pythoneda-shared-pythoneda-banner =
-                pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python39;
-              pythoneda-shared-pythoneda-domain =
-                pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python39;
-              inherit archRole layer nixpkgsRelease org pkgs repo space;
-            };
-          pythoneda-shared-pythoneda-domain-artifact-infrastructure-raw-python39 =
-            shared.raw-devShell-for {
+              banner = "${
+                  pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python39
+                }/bin/banner.sh";
               package =
                 packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python39;
               python = pkgs.python39;
@@ -295,17 +281,9 @@
             };
           pythoneda-shared-pythoneda-domain-artifact-infrastructure-python310 =
             shared.devShell-for {
-              package =
-                packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python310;
-              python = pkgs.python310;
-              pythoneda-shared-pythoneda-banner =
-                pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python310;
-              pythoneda-shared-pythoneda-domain =
-                pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python310;
-              inherit archRole layer nixpkgsRelease org pkgs repo space;
-            };
-          pythoneda-shared-pythoneda-domain-artifact-infrastructure-raw-python310 =
-            shared.raw-devShell-for {
+              banner = "${
+                  pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python310
+                }/bin/banner.sh";
               package =
                 packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python310;
               python = pkgs.python310;
@@ -317,17 +295,9 @@
             };
           pythoneda-shared-pythoneda-domain-artifact-infrastructure-python311 =
             shared.devShell-for {
-              package =
-                packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python311;
-              python = pkgs.python311;
-              pythoneda-shared-pythoneda-banner =
-                pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python311;
-              pythoneda-shared-pythoneda-domain =
-                pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python311;
-              inherit archRole layer nixpkgsRelease org pkgs repo space;
-            };
-          pythoneda-shared-pythoneda-domain-artifact-infrastructure-raw-python311 =
-            shared.raw-devShell-for {
+              banner = "${
+                  pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python311
+                }/bin/banner.sh";
               package =
                 packages.pythoneda-shared-pythoneda-domain-artifact-infrastructure-python311;
               python = pkgs.python311;
