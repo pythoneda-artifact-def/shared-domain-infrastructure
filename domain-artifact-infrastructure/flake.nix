@@ -75,7 +75,7 @@
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.2?dir=infrastructure";
+        "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.4?dir=infrastructure";
     };
     INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared = {
       inputs.flake-utils.follows = "flake-utils";
