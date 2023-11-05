@@ -18,7 +18,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {
   description =
-    "Infrastructure layer for pythoneda-shared-pythoneda/domain-artifact-infrastructure";
+    "Infrastructure layer for pythoneda-shared-pythoneda/domain-artifact";
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/nixos-23.05";
@@ -161,13 +161,13 @@
       let
         org = "pythoneda-shared-pythoneda";
         repo = "domain-artifact-infrastructure";
-        version = "0.0.5";
-        sha256 = "01v6lwlg6zjc9xr5rsal9dli6nf2sxfq55mymagdiz70cvva69wf";
+        version = "0.0.6";
+        sha256 = "1fay3cz09ack3sqd8byi2m62ip6ws8jg8bgfnlg5fng5h1kh5l76";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.artifact.infrastructure";
         pkgs = import nixos { inherit system; };
         description =
-          "Infrastructure layer for pythoneda-shared-pythoneda/domain-artifact-infrastructure";
+          "Infrastructure layer for pythoneda-shared-pythoneda/domain-artifact";
         license = pkgs.lib.licenses.gpl3;
         homepage = "https://github.com/${org}/${repo}";
         maintainers = with pkgs.lib.maintainers;
