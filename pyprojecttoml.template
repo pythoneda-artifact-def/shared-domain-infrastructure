@@ -1,8 +1,8 @@
-# domain-artifact-infrastructure/pyprojecttoml.template
+# pyprojecttoml.template
 #
-# This file is the template for pythoneda-shared-pythoneda/domain-artifact-infrastructure's pyproject.toml
+# This file is the template for pythoneda-shared-pythoneda-artifact/domain-infrastructure's pyproject.toml
 #
-# Copyright (C) 2023-today rydnr's pythoneda-shared-pythoneda/domain-artifact-infrastructure-artifact
+# Copyright (C) 2023-today rydnr's pythoneda-shared-pythoneda-artifact-def/domain-infrastructure
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,8 +28,8 @@ packages = [{include = "@package@"}]
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinorVersion@"
 pythoneda-shared-artifact-infrastructure = "^@pythonedaSharedArtifactInfrastructure@"
+pythoneda-shared-pythoneda-artifact-domain = "^@pythonedaSharedPythonedaArtifactDomain@"
 pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomain@"
-pythoneda-shared-pythoneda-domain-artifact = "^@pythonedaSharedPythonedaDomainArtifact@"
 pythoneda-shared-pythoneda-infrastructure = "^@pythonedaSharedPythonedaInfrastructure@"
 
 [build-system]
