@@ -70,12 +70,12 @@
     with inputs;
     flake-utils.lib.eachDefaultSystem (system:
       let
-        org = "pythoneda-shared-pythoneda-artifact";
-        repo = "domain-infrastructure";
-        version = "0.0.14";
-        sha256 = "1q2jln48kyzg0qlrxz0r49w0irrvf44b3c5f9pvjkky9w46j2hpy";
+        org = "pythoneda-artifact";
+        repo = "shared-domain-infrastructure";
+        version = "0.0.16";
+        sha256 = "0g3a03kinxa196b2fk7krwfq6w8s8n3pff685x75ggdm081f7rwb";
         pname = "${org}-${repo}";
-        pythonpackage = "pythoneda.artifact.infrastructure";
+        pythonpackage = "pythoneda.artifact.shared.domain.infrastructure";
         pkgs = import nixos { inherit system; };
         description =
           "Infrastructure layer for pythoneda-shared-pythoneda/domain-artifact";
