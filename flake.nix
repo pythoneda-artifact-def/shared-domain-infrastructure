@@ -90,7 +90,7 @@
         nixpkgsRelease =
           builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
         shared = import "${pythoneda-shared-banner}/nix/shared.nix";
-        pythoneda-shared-pythoneda-artifact-domain-infrastructure-for = { python
+        pythoneda-artifact-shared-domain-infrastructure-for = { python
           , pythoneda-shared-artifact-artifact-events-infrastructure
           , pythoneda-shared-artifact-infrastructure, pythoneda-shared-domain
           , pythoneda-artifact-shared-domain, pythoneda-shared-infrastructure }:
@@ -170,11 +170,10 @@
       in rec {
         defaultPackage = packages.default;
         devShells = rec {
-          default =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-default;
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-default =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-python311;
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python38 =
+          default = pythoneda-artifact-shared-domain-infrastructure-default;
+          pythoneda-artifact-shared-domain-infrastructure-default =
+            pythoneda-artifact-shared-domain-infrastructure-python311;
+          pythoneda-artifact-shared-domain-infrastructure-python38 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python38
@@ -182,7 +181,7 @@
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
               package =
-                packages.pythoneda-shared-pythoneda-artifact-domain-infrastructure-python38;
+                packages.pythoneda-artifact-shared-domain-infrastructure-python38;
               python = pkgs.python38;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python38;
@@ -190,7 +189,7 @@
                 pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python38;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python39 =
+          pythoneda-artifact-shared-domain-infrastructure-python39 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python39
@@ -198,7 +197,7 @@
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
               package =
-                packages.pythoneda-shared-pythoneda-artifact-domain-infrastructure-python39;
+                packages.pythoneda-artifact-shared-domain-infrastructure-python39;
               python = pkgs.python39;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python39;
@@ -206,7 +205,7 @@
                 pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python39;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python310 =
+          pythoneda-artifact-shared-domain-infrastructure-python310 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python310
@@ -214,7 +213,7 @@
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
               package =
-                packages.pythoneda-shared-pythoneda-artifact-domain-infrastructure-python310;
+                packages.pythoneda-artifact-shared-domain-infrastructure-python310;
               python = pkgs.python310;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python310;
@@ -222,7 +221,7 @@
                 pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python310;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python311 =
+          pythoneda-artifact-shared-domain-infrastructure-python311 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python311
@@ -230,7 +229,7 @@
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
               package =
-                packages.pythoneda-shared-pythoneda-artifact-domain-infrastructure-python311;
+                packages.pythoneda-artifact-shared-domain-infrastructure-python311;
               python = pkgs.python311;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python311;
@@ -240,12 +239,11 @@
             };
         };
         packages = rec {
-          default =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-default;
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-default =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-python311;
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python38 =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-for {
+          default = pythoneda-artifact-shared-domain-infrastructure-default;
+          pythoneda-artifact-shared-domain-infrastructure-default =
+            pythoneda-artifact-shared-domain-infrastructure-python311;
+          pythoneda-artifact-shared-domain-infrastructure-python38 =
+            pythoneda-artifact-shared-domain-infrastructure-for {
               python = pkgs.python38;
               pythoneda-shared-artifact-artifact-events-infrastructure =
                 pythoneda-shared-artifact-artifact-events-infrastructure.packages.${system}.pythoneda-shared-artifact-artifact-events-infrastructure-python38;
@@ -258,8 +256,8 @@
               pythoneda-shared-infrastructure =
                 pythoneda-shared-infrastructure.packages.${system}.pythoneda-shared-infrastructure-python38;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python39 =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-for {
+          pythoneda-artifact-shared-domain-infrastructure-python39 =
+            pythoneda-artifact-shared-domain-infrastructure-for {
               python = pkgs.python39;
               pythoneda-shared-artifact-artifact-events-infrastructure =
                 pythoneda-shared-artifact-artifact-events-infrastructure.packages.${system}.pythoneda-shared-artifact-artifact-events-infrastructure-python39;
@@ -272,8 +270,8 @@
               pythoneda-shared-infrastructure =
                 pythoneda-shared-infrastructure.packages.${system}.pythoneda-shared-infrastructure-python39;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python310 =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-for {
+          pythoneda-artifact-shared-domain-infrastructure-python310 =
+            pythoneda-artifact-shared-domain-infrastructure-for {
               python = pkgs.python310;
               pythoneda-shared-artifact-artifact-events-infrastructure =
                 pythoneda-shared-artifact-artifact-events-infrastructure.packages.${system}.pythoneda-shared-artifact-artifact-events-infrastructure-python310;
@@ -286,8 +284,8 @@
               pythoneda-shared-infrastructure =
                 pythoneda-shared-infrastructure.packages.${system}.pythoneda-shared-infrastructure-python310;
             };
-          pythoneda-shared-pythoneda-artifact-domain-infrastructure-python311 =
-            pythoneda-shared-pythoneda-artifact-domain-infrastructure-for {
+          pythoneda-artifact-shared-domain-infrastructure-python311 =
+            pythoneda-artifact-shared-domain-infrastructure-for {
               python = pkgs.python311;
               pythoneda-shared-artifact-artifact-events-infrastructure =
                 pythoneda-shared-artifact-artifact-events-infrastructure.packages.${system}.pythoneda-shared-artifact-artifact-events-infrastructure-python311;
