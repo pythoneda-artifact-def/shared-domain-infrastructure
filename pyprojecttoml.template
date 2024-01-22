@@ -27,11 +27,11 @@ packages = [{include = "@package@"}]
 
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinorVersion@"
+pythoneda-artifact-shared-domain = "^@pythonedaArtifactSharedDomain@"
 pythoneda-shared-artifact-artifact-events-infrastructure = "^@pythonedaSharedArtifactArtifactEventsInfrastructure@"
 pythoneda-shared-artifact-infrastructure = "^@pythonedaSharedArtifactInfrastructure@"
 pythoneda-shared-domain = "^@pythonedaSharedDomain@"
 pythoneda-shared-infrastructure = "^@pythonedaSharedInfrastructure@"
-pythoneda-shared-pythoneda-artifact-domain = "^@pythonedaSharedPythonedaArtifactDomain@"
 
 [build-system]
 requires = ["poetry-core"]
