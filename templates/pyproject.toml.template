@@ -1,8 +1,8 @@
-# pyprojecttoml.template
+# templates/pyprojecttoml.template
 #
-# This file is the template for pythoneda-shared-artifact/domain-infrastructure's pyproject.toml
+# This file is the template for pythoneda-shared-pythonlang-artf/infrastructure's pyproject.toml
 #
-# Copyright (C) 2023-today rydnr's pythoneda-shared-artifact-def/domain-infrastructure
+# Copyright (C) 2023-today rydnr's pythoneda-shared-pythonlang-artf-def/domain-infrastructure
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
