@@ -28,7 +28,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-pythonlang-artf-def/domain/0.0.57";
+      url = "github:pythoneda-shared-pythonlang-artf-def/domain/0.0.59";
     };
     pythoneda-shared-artifact-artifact-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -81,10 +81,10 @@
       let
         org = "pythoneda-shared-pythonlang-artf";
         repo = "infrastructure";
-        version = "0.0.17";
-        sha256 = "09hkyf8hkyx23ibhjdv5nsln9i1m113h3rz38g086icsr1wizwfc";
+        version = "0.0.18";
+        sha256 = "1d39ywq8rvrd5p2z1xpdkmsfs7wlnz5hnf1mdqyygclxpn6q3ymi";
         pname = "${org}-${repo}";
-        pythonpackage = "pythoneda.artifact.shared.domain.infrastructure";
+        pythonpackage = "pythoneda.artifact.shared.infrastructure";
         pkgs = import nixos { inherit system; };
         description =
           "Infrastructure layer for pythoneda-shared-pythonlang-artf/domain";
