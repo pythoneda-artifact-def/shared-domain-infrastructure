@@ -181,8 +181,7 @@
       in rec {
         defaultPackage = packages.default;
         devShells = rec {
-          default = pythoneda-shared-pythonlang-artf-infrastructure-default =
-            pythoneda-shared-pythonlang-artf-infrastructure-python312;
+          default = pythoneda-shared-pythonlang-artf-infrastructure-python312;
           pythoneda-shared-pythonlang-artf-infrastructure-python39 =
             shared.devShell-for {
               banner = "${
