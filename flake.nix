@@ -81,8 +81,8 @@
       let
         org = "pythoneda-shared-pythonlang-artf";
         repo = "infrastructure";
-        version = "0.0.19";
-        sha256 = "184f5br6zg64a3vg48pd2jgi5cqb3z5y1v4x1skm9i8j3p8h4gsg";
+        version = "0.0.20";
+        sha256 = "1cg6kq5vh936xsjly49my0i79dnbhw11f3xwqr1aivavxvz7lczx";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.artifact.shared.infrastructure";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
